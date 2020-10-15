@@ -15,11 +15,11 @@ function App() {
     } = wordGame()
 
     return (
-        <div>
+        <div className="container">
             <h1>Speed Typing</h1>
             <textarea ref={textRef} onChange={textAreaHandler} value={text} disabled={!gameState} />
             <h4>Time remaining: {timeRemanining}</h4>
-            <button onClick={() => startGame} disabled={gameState}>Start</button>
+            <button onClick={() => startGame()} disabled={gameState}>Start</button>
             <h1>Word count: {wordCount}</h1>
         </div>
     )
